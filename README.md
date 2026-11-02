@@ -27,7 +27,7 @@ Welcome to Sturdy Octo Disco, a fun and creative project designed to overlay sun
 - Practicing computer vision workflows
 
 ### Program 
-```
+```python
 # Import libraries
 import cv2
 import numpy as np
