@@ -25,48 +25,46 @@ Welcome to Sturdy Octo Disco, a fun and creative project designed to overlay sun
 - Learning basic image processing techniques.
 - Adding flair to your photos for fun.
 - Practicing computer vision workflows
+
+### Program 
 ```
 # Import libraries
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
-```
-```
+
 # Load the Face Image
 faceImage = cv2.imread('varsh.jpeg')
 plt.imshow(faceImage[:,:,::-1]);plt.title("Face")
-```
-```
+
 faceImage.shape
-```
-```
+
+
 #resized_faceImage.shape
 faceImage.shape
-```
-```
+
+
 # Load the Sunglass image with Alpha channel
 # (http://pluspng.com/sunglass-png-1104.html)
 glassPNG = cv2.imread('sunglass.png',-1)
 plt.imshow(glassPNG[:,:,::-1]);plt.title("glassPNG")
-```
-```
+
 # Resize the image to fit over the eye region
 glassPNG = cv2.resize(glassPNG,(250, 80))
 print("image Dimension ={}".format(glassPNG.shape))
-```
 
-```
+
+
 # Separate the Color and alpha channels
 glassBGR = glassPNG[:,:,0:3]
 glassMask1 = glassPNG[:,:,3]
-```
-```
+
 # Display the images for clarity
 plt.figure(figsize=[15,15])
 plt.subplot(121);plt.imshow(glassBGR[:,:,::-1]);plt.title('Sunglass Color channels');
 plt.subplot(122);plt.imshow(glassMask1,cmap='gray');plt.title('Sunglass Alpha channel');
-```
-```
+
+
 # Make a copy
 #faceWithGlassesNaive = resized_faceImage.copy()
 faceWithGlassesNaive = faceImage.copy()
@@ -75,9 +73,8 @@ faceWithGlassesNaive = faceImage.copy()
 faceWithGlassesNaive[340:420, 340:590]=glassBGR
 
 plt.imshow(faceWithGlassesNaive[...,::-1])
-```
 
-```
+
 # Make the dimensions of the mask same as the input image.
 # Since Face Image is a 3-channel image, we create a 3 channel image for the mask
 glassMask = cv2.merge((glassMask1,glassMask1,glassMask1))
@@ -105,9 +102,9 @@ plt.figure(figsize=[20,20])
 plt.subplot(131);plt.imshow(maskedEye[...,::-1]);plt.title("Masked Eye Region")
 plt.subplot(132);plt.imshow(maskedGlass[...,::-1]);plt.title("Masked Sunglass Region")
 plt.subplot(133);plt.imshow(eyeRoiFinal[...,::-1]);plt.title("Augmented Eye and Sunglass")
-```
 
-```
+
+
 # Replace the eye ROI with the output from the previous section
 faceWithGlassesArithmetic[340:420, 340:590]=eyeRoiFinal
 
@@ -115,6 +112,7 @@ faceWithGlassesArithmetic[340:420, 340:590]=eyeRoiFinal
 plt.figure(figsize=[8,10]);
 plt.subplot(121);plt.imshow(faceImage[:,:,::-1]); plt.title("Original Image");
 plt.subplot(122);plt.imshow(faceWithGlassesArithmetic[:,:,::-1]);plt.title("With Sunglasses");
+
 ```
 
 ### OUTPUT:
