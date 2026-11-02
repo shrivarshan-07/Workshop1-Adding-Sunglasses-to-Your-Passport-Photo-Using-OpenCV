@@ -29,7 +29,7 @@ import matplotlib.pyplot as plt
 ```
 ```
 # Load the Face Image
-faceImage = cv2.imread('me.jpeg')
+faceImage = cv2.imread('varsh.jpeg')
 plt.imshow(faceImage[:,:,::-1]);plt.title("Face")
 ```
 ```
@@ -144,7 +144,8 @@ plt.subplot(122);plt.imshow(faceWithGlassesArithmetic[:,:,::-1]);plt.title("With
 
 #### Image with and without sunglasses
 
-<img width="715" height="452" alt="image" src="https://github.com/user-attachments/assets/c014a16b-c731-47d6-9cec-87f25437e88a" />
+<img width="790" height="497" alt="image" src="https://github.com/user-attachments/assets/49da3dca-ebdf-4969-990e-b670929e5920" />
+
 
 ### RESULT:
 Thus, the Sturdy Octo Disco is a fun project that adds sunglasses to photos using image processing has been done and verified successfully.
