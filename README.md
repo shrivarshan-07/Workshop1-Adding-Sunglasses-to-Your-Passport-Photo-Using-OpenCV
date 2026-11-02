@@ -1,4 +1,4 @@
-# Workshop--1-Adding-Sunglasses-to-Your-Passport-Photo-Using-OpenCV
+# Adding-Sunglasses-to-Your-Passport-Photo-Using-OpenCV
 
 **Name:** SHRIVARSHAN P G  
 **Register Number:** 212225240146  
