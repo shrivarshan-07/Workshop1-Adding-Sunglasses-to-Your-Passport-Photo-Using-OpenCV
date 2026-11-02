@@ -139,7 +139,8 @@ plt.subplot(122);plt.imshow(faceWithGlassesArithmetic[:,:,::-1]);plt.title("With
 
 #### Augumented Eye and Sunglasses 
 
-<img width="732" height="142" alt="image" src="https://github.com/user-attachments/assets/6b717dc3-1101-4e39-b8fe-d405522b250c" />
+<img width="1360" height="206" alt="image" src="https://github.com/user-attachments/assets/a0b1294e-3124-4ceb-86ca-71b82f35df55" />
+
 
 #### Image with and without sunglasses
 
